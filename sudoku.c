@@ -47,9 +47,9 @@ int is_valid(Node *n) {
    int used[10]; // para números 1..9
 
        // Validar filas
-      for(int i = 0; i < 9; i++){
-           for(int k = 1; k <= 9; k++) used[k] = 0;
-           for(int j = 0; j < 9; j++){
+      for(int i = 0; i < 3; i++){
+           for(int k = 1; k <= 3; k++) used[k] = 0;
+           for(int j = 0; j < 3; j++){
                int val = n->sudo[i][j];
                if(val != 0){
                    if(used[val]) return 0; // repetido
