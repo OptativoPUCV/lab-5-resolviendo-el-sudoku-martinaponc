@@ -67,3 +67,32 @@ Fri 16 May 2025 10:07:56 PM UTC:
  tests:  6|2
 total_score: 45/70
 8492e5c
+Fri 16 May 2025 10:08:17 PM UTC: 
+ sudoku.c | 32 ++++++++++++++++++++++++++++++--
+ 1 file changed, 30 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:133:12: error: implicit declaration of function ‘isEmpty’; did you mean ‘is_empty’? [-Werror=implicit-function-declaration]
+  133 |     while(!isEmpty(S)) {
+      |            ^~~~~~~
+      |            is_empty
+sudoku.c:134:25: error: void value not ignored as it ought to be
+  134 |         Node* current = pop(S);
+      |                         ^~~
+sudoku.c:139:13: error: implicit declaration of function ‘clearStack’; did you mean ‘createStack’? [-Werror=implicit-function-declaration]
+  139 |             clearStack(S); // liberar memoria pila
+      |             ^~~~~~~~~~
+      |             createStack
+sudoku.c:147:23: error: implicit declaration of function ‘popList’ [-Werror=implicit-function-declaration]
+  147 |         while( (aux = popList(adj)) != NULL ) {
+      |                       ^~~~~~~
+sudoku.c:147:21: error: assignment to ‘Node *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  147 |         while( (aux = popList(adj)) != NULL ) {
+      |                     ^
+sudoku.c:151:9: error: implicit declaration of function ‘freeList’; did you mean ‘createList’? [-Werror=implicit-function-declaration]
+  151 |         freeList(adj);
+      |         ^~~~~~~~
+      |         createList
+cc1: all warnings being treated as errors
+8011ecd
