@@ -28,3 +28,12 @@ sudoku.c:67:24: error: implicit declaration of function ‘addNode’ [-Werror=i
       |                        ^~~~~~~
 cc1: all warnings being treated as errors
 38a764e
+Fri 16 May 2025 10:03:27 PM UTC: 
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:67:24: error: implicit declaration of function ‘addNode’ [-Werror=implicit-function-declaration]
+   67 |                        addNode(list, copy_node);
+      |                        ^~~~~~~
+cc1: all warnings being treated as errors
+cdbec8d
