@@ -123,3 +123,20 @@ sudoku.c:147:19: error: cast to pointer from integer of different size [-Werror=
       |                   ^
 cc1: all warnings being treated as errors
 bdb1046
+Fri 16 May 2025 10:12:40 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:142:29: error: implicit declaration of function ‘firstList’ [-Werror=implicit-function-declaration]
+  142 |         Node* aux = (Node*) firstList(adj);
+      |                             ^~~~~~~~~
+sudoku.c:142:21: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  142 |         Node* aux = (Node*) firstList(adj);
+      |                     ^
+sudoku.c:147:19: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  147 |             aux = (Node*) firstList(adj);
+      |                   ^
+cc1: all warnings being treated as errors
+4f63937

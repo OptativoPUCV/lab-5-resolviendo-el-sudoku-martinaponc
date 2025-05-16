@@ -143,7 +143,7 @@ Node* DFS(Node* n, int* cont){
 
         while(aux != NULL){
             push(S, aux);
-            popFront(adj); // eliminar después de obtenerlo
+            popFront(adj);
             aux = (Node*) firstList(adj);
         }
 
@@ -153,6 +153,7 @@ Node* DFS(Node* n, int* cont){
 
     return NULL;
 }
+
 
 
 
