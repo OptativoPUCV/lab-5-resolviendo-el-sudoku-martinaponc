@@ -37,3 +37,9 @@ sudoku.c:67:24: error: implicit declaration of function ‘addNode’ [-Werror=i
       |                        ^~~~~~~
 cc1: all warnings being treated as errors
 cdbec8d
+Fri 16 May 2025 10:04:28 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|4
+total_score: 15/70
+d655927
