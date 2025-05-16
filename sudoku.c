@@ -50,30 +50,28 @@ int is_valid(Node* n){
 
 
 List* get_adj_nodes(Node* n){
-    List* list=createList();
-    int i, j;
-        int found_empty = 0;
+   List* list = createList();
+       int i, j;
+       int found_empty = 0;
+       int num; // Declarar fuera del for
 
-        // Buscar la primera casilla vacía (0)
-        for(i = 0; i < 9 && !found_empty; i++){
-            for(j = 0; j < 9 && !found_empty; j++){
-                if(n->sudo[i][j] == 0){
-                    found_empty = 1;
-                    // Para cada número del 1 al 9, crear un nuevo nodo con ese valor
-                    for(int num = 1; num <= 9; num++){
-                        Node* copy_node = copy(n);
-                        copy_node->sudo[i][j] = num;
-                        // Agregar a la lista
-                        addNode(list, copy_node);
-                    }
-                }
-            }
-        }
+       // Buscar la primera casilla vacía (0)
+       for(i = 0; i < 9 && !found_empty; i++){
+           for(j = 0; j < 9 && !found_empty; j++){
+               if(n->sudo[i][j] == 0){
+                   found_empty = 1;
+                   // Para cada número del 1 al 9, crear un nuevo nodo con ese valor
+                   for(num = 1; num <= 9; num++){
+                       Node* copy_node = copy(n);
+                       copy_node->sudo[i][j] = num;
+                       addNode(list, copy_node);
+                   }
+               }
+           }
+       }
 
-        // Si no se encontró casilla vacía, la lista quedará vacía (no hay adyacentes)
-        return list;
-    }
-}
+       return list;
+   }
 
 
 int is_final(Node* n){

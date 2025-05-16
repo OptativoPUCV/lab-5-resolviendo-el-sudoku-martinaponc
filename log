@@ -17,3 +17,14 @@ sudoku.c:76:1: error: expected identifier or ‘(’ before ‘}’ token
       | ^
 cc1: all warnings being treated as errors
 5729496
+Fri 16 May 2025 10:02:58 PM UTC: 
+ sudoku.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:67:24: error: implicit declaration of function ‘addNode’ [-Werror=implicit-function-declaration]
+   67 |                        addNode(list, copy_node);
+      |                        ^~~~~~~
+cc1: all warnings being treated as errors
+38a764e
