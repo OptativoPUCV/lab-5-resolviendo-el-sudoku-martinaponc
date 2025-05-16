@@ -96,3 +96,13 @@ sudoku.c:151:9: error: implicit declaration of function ‘freeList’; did you 
       |         createList
 cc1: all warnings being treated as errors
 8011ecd
+Fri 16 May 2025 10:09:49 PM UTC: 
+ sudoku.c | 21 +++++++++------------
+ 1 file changed, 9 insertions(+), 12 deletions(-)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:144:22: error: invalid use of void expression
+  144 |         while((aux = (Node*) popFront(adj)) != NULL){
+      |                      ^
+277c7d6
