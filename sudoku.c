@@ -43,7 +43,50 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
+int is_valid(Node *n) {
+   int used[10]; // para números 1..9
+
+       // Validar filas
+      for(int i = 0; i < 9; i++){
+           for(int k = 1; k <= 9; k++) used[k] = 0;
+           for(int j = 0; j < 9; j++){
+               int val = n->sudo[i][j];
+               if(val != 0){
+                   if(used[val]) return 0; // repetido
+                   used[val] = 1;
+               }
+           }
+       }
+
+       // Validar columnas
+       for(int j = 0; j < 9; j++){
+           for(int k = 1; k <= 9; k++) used[k] = 0;
+           for(int i = 0; i < 9; i++){
+               int val = n->sudo[i][j];
+               if(val != 0){
+                   if(used[val]) return 0; // repetido
+                   used[val] = 1;
+               }
+           }
+       }
+
+       // Validar submatrices 3x3
+       for(int k = 0; k < 9; k++){
+           for(int i = 1; i <= 9; i++) used[i] = 0;
+           for(int p = 0; p < 9; p++){
+               int i = 3*(k/3) + (p/3);
+               int j = 3*(k%3) + (p%3);
+               int val = n->sudo[i][j];
+               if(val != 0){
+                   if(used[val]) return 0; // repetido
+                   used[val] = 1;
+               }
+           }
+       }
+
+       return 1; // válido
+   }
+
 
     return 1;
 }
