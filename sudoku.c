@@ -139,12 +139,12 @@ Node* DFS(Node* n, int* cont){
         }
 
         List* adj = get_adj_nodes(current);
-        Node* aux = (Node*) firstList(adj);
+        Node* aux = (Node*) first(adj);
 
         while(aux != NULL){
             push(S, aux);
             popFront(adj);
-            aux = (Node*) firstList(adj);
+            aux = (Node*) first(adj);
         }
 
         clean(adj);
