@@ -106,3 +106,20 @@ sudoku.c:144:22: error: invalid use of void expression
   144 |         while((aux = (Node*) popFront(adj)) != NULL){
       |                      ^
 277c7d6
+Fri 16 May 2025 10:11:24 PM UTC: 
+ sudoku.c | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:142:29: error: implicit declaration of function ‘firstList’ [-Werror=implicit-function-declaration]
+  142 |         Node* aux = (Node*) firstList(adj);
+      |                             ^~~~~~~~~
+sudoku.c:142:21: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  142 |         Node* aux = (Node*) firstList(adj);
+      |                     ^
+sudoku.c:147:19: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  147 |             aux = (Node*) firstList(adj);
+      |                   ^
+cc1: all warnings being treated as errors
+bdb1046

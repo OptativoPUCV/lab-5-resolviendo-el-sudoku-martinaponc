@@ -134,19 +134,21 @@ Node* DFS(Node* n, int* cont){
         (*cont)++;
 
         if(is_final(current)){
-            clean(S); // ✅ liberar pila correctamente
+            clean(S);
             return current;
         }
 
         List* adj = get_adj_nodes(current);
-        Node* aux;
+        Node* aux = (Node*) firstList(adj);
 
-        while((aux = (Node*) popFront(adj)) != NULL){
+        while(aux != NULL){
             push(S, aux);
+            popFront(adj); // eliminar después de obtenerlo
+            aux = (Node*) firstList(adj);
         }
 
-        clean(adj); // ✅ limpiar lista
-        free(current); // liberar nodo actual ya procesado
+        clean(adj);
+        free(current);
     }
 
     return NULL;
